@@ -37,13 +37,14 @@ int main(int argc, char const *argv[]) {
     int lowerBound = std::stoi(v_lines[i].substr(0,boundsIndex));
     int upperBound = std::stoi(v_lines[i].substr(boundsIndex+1,v_lines[i].length()));
 
+    //Question 1
     // int countOcc= std::count(v_lines[i+2].begin(),v_lines[i+2].end(),v_lines[i+1][0]);
     // std::cout << "Lower bound : " << lowerBound << " " << "Upper bound : " << upperBound << " " << countOcc << '\n';
     // if(countOcc >= lowerBound && countOcc <= upperBound){
     //   NbPassOK++;
     // }
 
-
+    //Question 2
     // std::cout << "Looking for : " << v_lines[i+1][0] << endl;
     if ((v_lines[i+2][lowerBound-1] == v_lines[i+1][0] && v_lines[i+2][upperBound-1] != v_lines[i+1][0]) || (v_lines[i+2][lowerBound-1] != v_lines[i+1][0] && v_lines[i+2][upperBound-1] == v_lines[i+1][0])) {
       NbPassOK++;
